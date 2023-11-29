@@ -4,9 +4,7 @@ import 'package:get/get.dart';
 class ScreenSizeController extends GetxController {
   late Rx<Size> screenSize;
 
-  @override
-  void onInit() {
-    super.onInit();
-    screenSize = MediaQuery.of(Get.context!).size.obs;
+  void updateScreenSize(BuildContext context) {
+    screenSize = MediaQuery.of(context).size.obs;
   }
 }

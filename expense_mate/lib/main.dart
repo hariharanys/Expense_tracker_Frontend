@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    screenSizeController.updateScreenSize(context);
     return GetMaterialApp(
         title: 'ExpenseMate',
         debugShowCheckedModeBanner: false,
