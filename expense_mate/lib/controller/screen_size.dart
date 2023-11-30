@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:expense_mate/controller/imports/screen_size_imports.dart';
 
 class ScreenSizeController extends GetxController {
   late Rx<Size> screenSize;

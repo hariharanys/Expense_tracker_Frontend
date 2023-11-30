@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:expense_mate/view/splash_screen.dart';
+import 'package:expense_mate/routes/imports/route_imports.dart';
 
 const String splashScreen = 'splash';
 

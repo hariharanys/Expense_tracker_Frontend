@@ -1,6 +1,4 @@
-import 'package:expense_mate/controller/screen_size.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:expense_mate/utils/imports/custome_outline_import.dart';
 
 ///this is a custombutton which is set to use dynamically
 ///for various purpose
@@ -31,10 +29,7 @@ class CustomOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ScreenSizeController screenSizeController =
-        Get.find<ScreenSizeController>();
-
-    Size screenSize = screenSizeController.screenSize.value;
+    Size screenSize = MediaQuery.of(context).size;
     return SizedBox(
       width: screenSize.width * widthMultiplier,
       child: OutlinedButton(

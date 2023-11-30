@@ -1,5 +1,4 @@
-import 'package:expense_mate/constants/lang_constant.dart';
-import 'package:flutter/material.dart';
+import 'package:expense_mate/constants/imports/constant_import.dart';
 
 class Constants {
   static LangConstants langConstants = LangConstants();

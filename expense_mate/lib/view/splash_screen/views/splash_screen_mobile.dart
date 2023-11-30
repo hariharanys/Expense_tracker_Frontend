@@ -1,27 +1,17 @@
-import 'package:expense_mate/controller/screen_size.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:expense_mate/constants/constants.dart';
-import 'package:expense_mate/Theme/app_color.dart';
-import 'package:expense_mate/utils/custom_outlined.dart';
-import 'package:get/get.dart';
+import 'package:expense_mate/view/splash_screen/imports/splash_screen_import.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashScreenMobile extends StatefulWidget {
+  const SplashScreenMobile({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashScreenMobile> createState() => _SplashScreenMobileState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenMobileState extends State<SplashScreenMobile> {
   @override
   Widget build(BuildContext context) {
-    final ScreenSizeController screenSizeController =
-        Get.find<ScreenSizeController>();
-
     const String assetName = "assets/images/splashscreen.svg";
-    Size screensize = screenSizeController.screenSize.value;
+    Size screensize = MediaQuery.of(context).size;
     final double leftRightPadding = screensize.width * 0.05;
     final double topPadding = screensize.height * 0.15;
     final double bottomPadding = screensize.height * 0.1;

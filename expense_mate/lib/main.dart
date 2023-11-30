@@ -6,18 +6,15 @@ import 'package:get/get.dart';
 
 void main() async {
   await Constants.initialize();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final ScreenSizeController screenSizeController =
-      Get.put(ScreenSizeController());
-  MyApp({super.key});
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    screenSizeController.updateScreenSize(context);
     return GetMaterialApp(
         title: 'ExpenseMate',
         debugShowCheckedModeBanner: false,
