@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     Size screensize = MediaQuery.of(context).size;
 
-    double mobileScreenWidthThreshold = 600;
+    double mobileScreenWidthThreshold = ScreenSize.mobileScreenThreshold;
 
     if (screensize.width < mobileScreenWidthThreshold) {
       return SplashScreenMobile();
