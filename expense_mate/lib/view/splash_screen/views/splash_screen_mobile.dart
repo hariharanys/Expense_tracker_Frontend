@@ -1,4 +1,5 @@
 import 'package:expense_mate/view/splash_screen/imports/splash_screen_import.dart';
+import 'package:expense_mate/routes/route.dart' as route;
 
 class SplashScreenMobile extends StatefulWidget {
   const SplashScreenMobile({super.key});
@@ -10,7 +11,7 @@ class SplashScreenMobile extends StatefulWidget {
 class _SplashScreenMobileState extends State<SplashScreenMobile> {
   @override
   Widget build(BuildContext context) {
-    const String assetName = "assets/images/splashscreen.svg";
+    String assetName = FileConstant.splashScreenBg;
     Size screensize = MediaQuery.of(context).size;
     final double leftRightPadding = screensize.width * 0.05;
     final double topPadding = screensize.height * 0.15;
@@ -30,11 +31,11 @@ class _SplashScreenMobileState extends State<SplashScreenMobile> {
           children: [
             SvgPicture.asset(
               assetName,
-              height: MediaQuery.of(context).size.height / 4,
-              width: MediaQuery.of(context).size.width / 4,
+              height: 250,
+              width: 250,
             ),
-            SizedBox(
-              height: screensize.height * 0.09,
+            const SizedBox(
+              height: 39,
             ),
             Text(
               Constants.langConstants.getText(
@@ -44,13 +45,13 @@ class _SplashScreenMobileState extends State<SplashScreenMobile> {
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: screensize.width * 0.08,
+                  fontSize: 29,
                   fontWeight: FontWeight.w700,
                   letterSpacing: 1.0,
                   color: AppColors.secondaryColor),
             ),
-            SizedBox(
-              height: screensize.height * 0.03,
+            const SizedBox(
+              height: 39,
             ),
             Text(
               Constants.langConstants.getText(
@@ -65,8 +66,8 @@ class _SplashScreenMobileState extends State<SplashScreenMobile> {
                   letterSpacing: 1.0,
                   color: AppColors.secondaryColor),
             ),
-            SizedBox(
-              height: screensize.height * 0.1,
+            const SizedBox(
+              height: 69,
             ),
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
@@ -75,14 +76,16 @@ class _SplashScreenMobileState extends State<SplashScreenMobile> {
                   label: Constants.langConstants.getText(
                       Constants.langConstants.splashscreen,
                       Constants.langConstants.lblSplashLogIn),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.pushNamed(context, route.loginScreen);
+                  },
                   backgroundColor: AppColors.secondaryColor,
                   shape: const LinearBorder(),
-                  fontSizeMultiplier: 0.04,
+                  fontSizeMultiplier: 15,
                   fontWeight: FontWeight.w700,
                   letterSpacing: 1.0,
                   textColor: AppColors.primaryColor,
-                  widthMultiplier: 0.4,
+                  widthMultiplier: 159,
                 ),
                 CustomOutlinedButton(
                   label: Constants.langConstants.getText(
@@ -91,11 +94,11 @@ class _SplashScreenMobileState extends State<SplashScreenMobile> {
                   onPressed: null,
                   backgroundColor: AppColors.buttonPrimaryColor,
                   shape: const LinearBorder(),
-                  fontSizeMultiplier: 0.04,
+                  fontSizeMultiplier: 15,
                   fontWeight: FontWeight.w700,
                   letterSpacing: 1.0,
                   textColor: AppColors.secondaryColor,
-                  widthMultiplier: 0.4,
+                  widthMultiplier: 159,
                 ),
               ],
             )
