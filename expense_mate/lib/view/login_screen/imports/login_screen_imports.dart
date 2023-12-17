@@ -10,3 +10,4 @@ export 'package:expense_mate/view/login_screen/views/login_screen_mobile.dart';
 export 'package:expense_mate/view/login_screen/views/login_screen_web.dart';
 export 'package:expense_mate/utils/custom_clip.dart';
 export 'package:expense_mate/utils/custom_clip_path.dart';
+export 'package:expense_mate/view/login_screen/views/components/login_fields.dart';
